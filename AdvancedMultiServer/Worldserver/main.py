@@ -1,11 +1,9 @@
 import sys
 import os
 
-
-from PythonProject.WebsocketMMO.Server.common import messagepack_utils
-from PythonProject.WebsocketMMO.Server.common.packet_types import EPacketOpcode
-from PythonProject.WebsocketMMO.WorldServer import handlers
-from PythonProject.WebsocketMMO.WorldServer.common import packet_manager
+from AdvancedMultiServer.Worldserver import handlers
+from AdvancedMultiServer.shared import packet_manager, messagepack_utils
+from AdvancedMultiServer.shared.packet_types import EPacketOpcode
 
 # Goes up: WorldServer → WebsocketMMO
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
