@@ -8,8 +8,8 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 from time import time as timestamp
 
-from PythonProject.WebsocketMMO.Server.common import messagepack_utils
-from PythonProject.WebsocketMMO.Server.common.packet_types import EPacketOpcode
+from AdvancedMultiServer.shared import messagepack_utils
+from AdvancedMultiServer.shared.packet_types import EPacketOpcode
 
 
 class GlobalEventScheduler:

@@ -1,4 +1,4 @@
-from PythonProject.WebsocketMMO.Server.common.packet_types import EPacketOpcode
+from AdvancedMultiServer.shared.packet_types import EPacketOpcode
 
 
 def register_handlers(pm):

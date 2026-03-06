@@ -21,7 +21,7 @@ world_service_ws = None
 
 # Auto-load handlers
 for _, mod_name, _ in pkgutil.iter_modules(handlers.__path__):
-    module = importlib.import_module(f"WorldServer.handlers.{mod_name}")
+    module = importlib.import_module(f"AdvancedMultiServer.Worldserver.handlers.{mod_name}")
     if hasattr(module, "register_handlers"):
         module.register_handlers(pm)
 

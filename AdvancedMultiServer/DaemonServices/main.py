@@ -1,8 +1,8 @@
 import sys
 import os
 
-from PythonProject.WebsocketMMO.Server.WorldServiceDaemon import events, handlers, database
-from PythonProject.WebsocketMMO.Server.common import packet_manager, messagepack_utils
+from AdvancedMultiServer.DaemonServices import events, handlers, database
+from AdvancedMultiServer.shared import packet_manager, messagepack_utils
 
 # Fix path: goes up WorldServiceDaemon → Server → WebsocketMMO
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
@@ -25,7 +25,7 @@ scheduler = events.GlobalEventScheduler(json_file="events.json")
 
 # Auto-load all handlers
 for _, mod_name, _ in pkgutil.iter_modules(handlers.__path__):
-    module = importlib.import_module(f"Server.WorldServiceDaemon.handlers.{mod_name}")
+    module = importlib.import_module(f"AdvancedMultiServer.DaemonServices.handlers.{mod_name}")
     if hasattr(module, "register_handlers"):
         module.register_handlers(pm)
 

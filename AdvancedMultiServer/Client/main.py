@@ -3,7 +3,7 @@ import websockets
 import sys
 import signal
 
-from PythonProject.WebsocketMMO.Server.common import messagepack_utils, packet_types
+from AdvancedMultiServer.shared import messagepack_utils, packet_types
 
 
 class MMOClient:
