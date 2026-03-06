@@ -3,10 +3,12 @@ import struct
 import sys
 import os
 
+from SimplePythonMMOServer.shared.packet_ids import PacketID
+from SimplePythonMMOServer.shared.protocol import build_packet
+
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from shared.protocol import build_packet
-from shared.packet_ids import PacketID
+
 
 def recv_exact(sock, size):
     data = b""

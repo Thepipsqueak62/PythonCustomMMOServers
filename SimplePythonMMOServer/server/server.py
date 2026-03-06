@@ -1,7 +1,9 @@
 import asyncio
 import struct
-from shared.packet_ids import PacketID
-from shared.protocol import build_packet
+
+from SimplePythonMMOServer.shared.packet_ids import PacketID
+from SimplePythonMMOServer.shared.protocol import build_packet
+
 
 async def read_exact(reader, size):
     data = b""
@@ -44,7 +46,7 @@ class GameServiceClient:
                 self.writer.close()
                 await self.writer.wait_closed()
             except Exception:
-                pass  # client already gone, ignore cleanup errors
+                pass  # Client already gone, ignore cleanup errors
 
     async def dispatch(self, packet_id, payload):
         if packet_id == PacketID.PING:

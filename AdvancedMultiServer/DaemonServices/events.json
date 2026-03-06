@@ -1,0 +1,12 @@
+[
+  {
+    "payload": "A mighty world boss has spawned!",
+    "time": "18:15",
+    "repeat": true
+  },
+  {
+    "payload": "Remember to check your Quests ",
+    "time": "18:23",
+    "repeat": true
+  }
+]
